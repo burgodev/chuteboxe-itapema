@@ -7,19 +7,17 @@ import { VimeoVideo } from "../types/vimeo";
 export const apiMoviesToMovies = (movies: VimeoVideo[]): Movie[] =>
   movies.map((movie, index) => ({
     id: movie.uri,
-    // titleType: movie.title_type,
+    titleType: "movie",
     title: movie.name,
     link: movie.link,
     description: movie.description,
     duration: movie.duration.toString(),
     image: movie.pictures.base_link,
-    // originalTitle: movie.original_title,
-    // year: movie.year ?? new Date().getFullYear().toString(), // Set to current year if not provided
-    // endYear: movie.end_year,
-    // runtime: movie.runtime,
-    // genre: movie.genre ?? "unknown",
-    // rating: Math.floor(Math.random() * 10) + 1, // Bonus: Generate a random rating from 1 to 10
-    // image: MOCK_TMDB_MOVIES[index % MOCK_TMDB_MOVIES.length].backgroundImage, // Bonus: Cycle through MOCK_TMDB_MOVIES
+    originalTitle: movie.original_title,
+    year: movie.year ?? new Date().getFullYear().toString(), // Set to current year if not provided
+    runtime: "1938",
+    genre: "unknown",
+    rating: Math.floor(Math.random() * 10) + 1, // Bonus: Generate a random rating from 1 to 10
   }));
 
 export const apiNamesToNames = (names: ApiName[]): Name[] =>

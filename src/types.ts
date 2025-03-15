@@ -6,7 +6,6 @@ export type Movie = {
   originalTitle?: string;
   isAdult?: boolean;
   year?: string;
-  endYear?: null;
   runtime?: string;
   genre?: string;
   image?: string;
