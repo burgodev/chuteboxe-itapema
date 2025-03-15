@@ -23,7 +23,7 @@ const Movie: React.FC<MovieProps> = ({ onClick, movie }) => {
       aria-label={`View details for ${title}`}
     >
       <div className="absolute inset-0"></div>
-      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center p-12 text-center transition-opacity bg-black bg-opacity-75 opacity-0 group-hover:opacity-100">
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center p-12 text-center transition-opacity bg-black bg-opacity-50 opacity-0 group-hover:opacity-100">
         <h5 className="text-lg md:text-3xl">{title}</h5>
         <p className="text-xs font-bold text-gray-400 md:text-lg">{genre}</p>
         <p className="text-xs font-bold text-gray-400 md:text-lg">({year})</p>

@@ -5,7 +5,9 @@ const useMoviesGrid = () => {
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
 
   const handleMovieClick = (movie: Movie) => {
-    setSelectedMovie(movie);
+    window.open(movie.link, "_blank");
+
+    // setSelectedMovie(movie);
   };
 
   const handleCloseModal = () => {

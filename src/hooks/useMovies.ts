@@ -1,5 +1,4 @@
-import { useMemo, useState, useEffect } from "react";
-import { useGetMovies } from "../api/hooks";
+import { useState, useEffect } from "react";
 import { Movie } from "../types";
 import usePagination from "./usePagination";
 import { MOCK_API_LOADING_TIME, PAGINATION_COUNT } from "../api/consts";
