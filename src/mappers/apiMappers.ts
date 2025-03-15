@@ -13,8 +13,8 @@ export const apiMoviesToMovies = (movies: VimeoVideo[]): Movie[] =>
     description: movie.description,
     duration: movie.duration.toString(),
     image: movie.pictures.base_link,
-    originalTitle: movie.original_title,
-    year: movie.year ?? new Date().getFullYear().toString(), // Set to current year if not provided
+    originalTitle: movie.name,
+    year: "2025",
     runtime: "1938",
     genre: "unknown",
     rating: Math.floor(Math.random() * 10) + 1, // Bonus: Generate a random rating from 1 to 10

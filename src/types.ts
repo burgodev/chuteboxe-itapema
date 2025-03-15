@@ -1,13 +1,13 @@
 export type Movie = {
   id: string;
   titleType?: string;
-  title?: string;
+  title: string;
   description: string;
-  originalTitle?: string;
+  originalTitle: string;
   isAdult?: boolean;
-  year?: string;
+  year: string;
   runtime?: string;
-  genre?: string;
+  genre: string;
   image?: string;
   rating?: number;
   link: string;
