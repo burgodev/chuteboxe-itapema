@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #060708;
   --foreground: #171717;
 }
 
@@ -23,4 +23,26 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} 
+
+
+/* Custom dark scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #060708; /* Dark color for the scrollbar thumb */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #181818; /* Dark grey color for the scrollbar track */
+}
+
+/* Apply the custom scrollbar styles to all elements */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #060708 #181818;
 }
