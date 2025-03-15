@@ -39,8 +39,8 @@ const MoviesGrid = () => {
 
   return (
     <div className="flex flex-col gap-12" data-testid="movies-grid">
-      <h1 className="hidden"> Free Movies </h1>
-      <div className="flex justify-end">
+      <h1 className="hidden"> Chute Boxe Itapema </h1>
+      {/* <div className="flex justify-end">
         <MoviesToolbar
           isDisabled={isLoading}
           allMovies={allMovies}
@@ -48,7 +48,7 @@ const MoviesGrid = () => {
             handleMoviesChange(filteredMovies);
           }}
         />
-      </div>
+      </div> */}
 
       <div className="relative full-width animate-slideInFromLeftAndFadeIn">
         {!movies.length ? (

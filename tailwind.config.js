@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './app/**/*.{js,jsx,ts,tsx}', // Adjust the paths to match your project structure
+    './src/**/*.{js,jsx,ts,tsx}', // Include other relevant directories
   ],
   theme: {
     extend: {
@@ -29,6 +30,7 @@ export default {
         white: '#ffffff',
         mediumGrey: '#b3b3b3',
         black: '#000000',
+        testRed: '#ff0000',
       },
       keyframes: {
         fadeIn: {

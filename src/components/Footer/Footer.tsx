@@ -63,7 +63,7 @@ const Footer = () => {
         </div>
 
         <p className="text-xs text-center text-gray-500">
-          © 1993-2025 Free Movies, Inc.
+          © 1993-2025 Chute Boxe Itapema, Inc.
         </p>
       </div>
     </footer>

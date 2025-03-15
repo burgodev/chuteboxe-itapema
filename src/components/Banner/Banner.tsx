@@ -2,7 +2,7 @@ const Banner = () => {
   return (
     <div className="relative w-full h-[75vh] animate-fadeIn">
       <img
-        src="/freeMoviesBanner.webp"
+        src="/background.webp"
         alt="Free Movies Banner"
         className="object-cover w-full h-full"
       />

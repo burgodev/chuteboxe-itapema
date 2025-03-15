@@ -29,7 +29,7 @@ const Header = () => {
         <div className="flex flex-row items-center gap-8">
           <img
             className="object-contain rounded cursor-pointer max-h-[65px] transition-all duration-300 animate-slideInFromLeftAndFadeIn"
-            src={"./freeMovies.webp"}
+            src={"./logo.webp"}
             alt="Free movies logo"
             onClick={scrollToTop}
           />
@@ -38,11 +38,11 @@ const Header = () => {
         </div>
       </header>
       {isSticky && (
-        <header className="fixed top-0 left-0 right-0 z-50 w-screen px-4 py-6 shadow-lg md:px-6 lg:px-8 xl:px-16 bg-dark">
+        <header className="fixed top-0 left-0 right-0 z-50 w-screen px-4 py-6 shadow-lg md:px-6 lg:px-8 xl:px-16 bg-darkGrey">
           <div className="flex flex-row items-center gap-8">
             <img
               className="object-contain rounded cursor-pointer max-h-[50px] transition-all duration-300 animate-slideInFromLeftAndFadeIn"
-              src={"./freeMovies.webp"}
+              src={"./logo.webp"}
               alt="Free movies logo"
               onClick={scrollToTop}
             />

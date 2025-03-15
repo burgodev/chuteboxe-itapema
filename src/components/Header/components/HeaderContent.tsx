@@ -13,7 +13,7 @@ const HeaderNav = () => {
         <a href="#" className="font-semibold">
           Home
         </a>
-        <a href="#" className="hover:text-gray-400">
+        {/* <a href="#" className="hover:text-gray-400">
           TV Shows
         </a>
         <a href="#" className="hover:text-gray-400">
@@ -27,11 +27,11 @@ const HeaderNav = () => {
         </a>
         <a href="#" className="hover:text-gray-400">
           Browse by Languages
-        </a>
+        </a> */}
       </nav>
-      <div className="flex items-center justify-center text-xl text-white rounded-full cursor-pointer w-14 h-14 bg-dark">
+      {/* <div className="flex items-center justify-center text-xl text-white rounded-full cursor-pointer w-14 h-14 bg-dark">
         {getInitials(currentUser.name)}
-      </div>
+      </div> */}
     </div>
   );
 };
