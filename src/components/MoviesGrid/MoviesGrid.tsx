@@ -51,47 +51,41 @@ const MoviesGrid = () => {
       </div> */}
 
       <div className="relative full-width animate-slideInFromLeftAndFadeIn">
-        {!movies.length ? (
-          <div className="flex items-center justify-center w-full h-[55vh]">
-            <strong>{"NO RESULTS :("}</strong>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 gap-x-12 gap-y-32 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-6">
-            {isLoading
-              ? Array.from({ length: 10 }).map((_, index) => (
-                  <MovieSkeleton key={index} />
-                ))
-              : movies.map((movie, index) => {
-                  if (movies.length === index + 1) {
-                    return (
-                      <div ref={lastMovieElementRef} key={index}>
-                        <Suspense fallback={<MovieSkeleton />}>
-                          <Movie
-                            onClick={() => handleMovieClick(movie)}
-                            movie={movie}
-                          />
-                        </Suspense>
-                      </div>
-                    );
-                  } else {
-                    return (
-                      <Suspense fallback={<MovieSkeleton />} key={index}>
-                        <div data-testid={movie.id}>
-                          <Movie
-                            onClick={() => handleMovieClick(movie)}
-                            movie={movie}
-                          />
-                        </div>
+        <div className="grid grid-cols-1 gap-x-12 gap-y-16 sm:gap-y-32 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {isLoading || !movies.length
+            ? Array.from({ length: 10 }).map((_, index) => (
+                <MovieSkeleton key={index} />
+              ))
+            : movies.map((movie, index) => {
+                if (movies.length === index + 1) {
+                  return (
+                    <div ref={lastMovieElementRef} key={index}>
+                      <Suspense fallback={<MovieSkeleton />}>
+                        <Movie
+                          onClick={() => handleMovieClick(movie)}
+                          movie={movie}
+                        />
                       </Suspense>
-                    );
-                  }
-                })}
-            {isLoadingMore &&
-              Array.from({ length: 2 }).map((_, index) => (
-                <MovieSkeleton key={`loading-more-${index}`} />
-              ))}
-          </div>
-        )}
+                    </div>
+                  );
+                } else {
+                  return (
+                    <Suspense fallback={<MovieSkeleton />} key={index}>
+                      <div data-testid={movie.id}>
+                        <Movie
+                          onClick={() => handleMovieClick(movie)}
+                          movie={movie}
+                        />
+                      </div>
+                    </Suspense>
+                  );
+                }
+              })}
+          {isLoadingMore &&
+            Array.from({ length: 2 }).map((_, index) => (
+              <MovieSkeleton key={`loading-more-${index}`} />
+            ))}
+        </div>
 
         {selectedMovie && (
           <MovieModal
