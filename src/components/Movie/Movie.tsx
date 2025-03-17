@@ -37,7 +37,7 @@ const Movie: React.FC<MovieProps> = ({ onClick, movie }) => {
         </div>
       </div>
       <img
-        className="object-cover w-full h-[45vh] transition-transform transform group-hover:scale-110"
+        className="object-cover w-full h-[60vh] transition-transform transform group-hover:scale-110"
         src={image}
         alt={`Poster of ${title}`}
         loading="lazy"
