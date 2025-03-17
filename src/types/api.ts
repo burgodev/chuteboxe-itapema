@@ -26,4 +26,5 @@ export type Video = {
   duration: string;
   categories: string[];
   link: string;
+  createdAt: string;
 };

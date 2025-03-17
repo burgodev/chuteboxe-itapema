@@ -10,6 +10,7 @@ export const vimeoVideotoVideoArray = (vimeoVideo: VimeoVideo[]): Video[] =>
     backgroundImage: video.pictures.base_link,
     duration: video.duration.toString(),
     categories: video.categories,
+    createdAt: video.created_time,
   }));
 
 export const vimeoVideotoVideo = (video: VimeoVideo): Video => ({
@@ -20,4 +21,5 @@ export const vimeoVideotoVideo = (video: VimeoVideo): Video => ({
   backgroundImage: video.pictures.base_link,
   duration: video.duration.toString(),
   categories: video.categories,
+  createdAt: video.created_time,
 });

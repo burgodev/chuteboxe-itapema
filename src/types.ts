@@ -12,6 +12,7 @@ export type Movie = {
   rating?: number;
   link: string;
   duration: string;
+  createdAt: string;
 };
 
 export type Principal = {
