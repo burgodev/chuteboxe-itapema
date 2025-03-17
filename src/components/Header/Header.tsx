@@ -25,10 +25,10 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-screen px-4 py-6 border-b border-solid md:px-6 lg:px-8 xl:px-16 bg-darkGrey border-mediumGrey">
+      <header className="w-screen px-4 py-5 border-b border-solid md:px-6 lg:px-8 xl:px-16 bg-darkGrey border-mediumGrey">
         <div className="flex flex-row items-center gap-8">
           <img
-            className="object-contain rounded cursor-pointer max-h-[65px] transition-all duration-300 animate-slideInFromLeftAndFadeIn"
+            className="object-contain rounded cursor-pointer max-h-[52px]  transition-all duration-300 animate-slideInFromLeftAndFadeIn"
             src={"./logo.webp"}
             alt="Free movies logo"
             onClick={scrollToTop}
@@ -38,10 +38,10 @@ const Header = () => {
         </div>
       </header>
       {isSticky && (
-        <header className="fixed top-0 left-0 right-0 z-50 w-screen px-4 py-6 shadow-lg md:px-6 lg:px-8 xl:px-16 bg-darkGrey">
+        <header className="fixed top-0 left-0 right-0 z-50 w-screen px-4 py-4 border-b border-solid shadow-lg md:px-6 lg:px-8 xl:px-16 bg-darkGrey border-mediumGrey">
           <div className="flex flex-row items-center gap-8">
             <img
-              className="object-contain rounded cursor-pointer max-h-[50px] transition-all duration-300 animate-slideInFromLeftAndFadeIn"
+              className="object-contain rounded cursor-pointer max-h-[40px] transition-all duration-300 animate-slideInFromLeftAndFadeIn"
               src={"./logo.webp"}
               alt="Free movies logo"
               onClick={scrollToTop}
