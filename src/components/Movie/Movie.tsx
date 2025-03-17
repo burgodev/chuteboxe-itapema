@@ -7,7 +7,7 @@ type MovieProps = {
 };
 
 const Movie: React.FC<MovieProps> = ({ onClick, movie }) => {
-  const { title, genre, image, year, rating } = movie;
+  const { title, duration, image, createdAt } = movie;
 
   return (
     <div
@@ -28,8 +28,12 @@ const Movie: React.FC<MovieProps> = ({ onClick, movie }) => {
           {title}
         </h5>
         <div className="opacity-0 group-hover:opacity-100">
-          <p className="text-xs font-bold text-gray-400 md:text-lg ">{genre}</p>
-          <p className="text-xs font-bold text-gray-400 md:text-lg">({year})</p>
+          <p className="text-xs font-bold text-gray-400 md:text-lg ">
+            {duration}min
+          </p>
+          <p className="text-xs font-bold text-gray-400 md:text-lg">
+            ({createdAt})
+          </p>
         </div>
       </div>
       <img
