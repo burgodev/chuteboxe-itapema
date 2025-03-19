@@ -1,4 +1,6 @@
 // import "tailwindcss/tailwind.css";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -30,6 +32,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="flex flex-col justify-between min-h-screen text-white bg-gradient-to-b from-dark via-black to-dark overflow-x-clip">
+          <Analytics />
+          <SpeedInsights />
+
           {children}
         </div>
       </body>
