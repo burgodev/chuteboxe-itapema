@@ -1,4 +1,5 @@
 export type Movie = {
+  iframe: string;
   id: string;
   titleType?: string;
   title: string;
