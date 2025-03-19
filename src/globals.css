@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #060708;
+  --background: #FFF;
   --foreground: #171717;
 }
 
@@ -47,4 +47,10 @@ body {
 * {
   scrollbar-width: thin;
   scrollbar-color: #060708 #181818;
+}
+
+.iframe-container iframe {
+  width: 100vw !important;
+  height: 75vh !important;
+  border: none;
 }
