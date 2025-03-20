@@ -1,6 +1,5 @@
 "use client";
 
-import { downloadVimeoVideo, getVimeoAccessToken } from "@/src/api/vimeoApi";
 import { Movie } from "@/src/types";
 
 interface PageClientProps {
@@ -14,7 +13,6 @@ const PageClient: React.FC<PageClientProps> = ({ video, relatedVideos }) => {
     <div className="flex flex-col min-h-screen gap-4 px-12 py-12">
       <div>
         <h1 className="text-2xl font-bold">{video.title}</h1>
-        <button onClick={() => downloadVimeoVideo(video.id)}>download</button>
       </div>
 
       <div className="flex-1">
