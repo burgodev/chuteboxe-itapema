@@ -7,8 +7,8 @@ export const vimeoVideotoVideoArray = (vimeoVideo: VimeoVideo[]): Video[] =>
     title: video.name,
     link: video.player_embed_url,
     description: video.description,
-    backgroundImage: video.pictures.base_link,
-    duration: video.duration.toString(),
+    backgroundImage: video.pictures?.base_link,
+    duration: video.duration?.toString(),
     categories: video.categories,
     createdAt: video.created_time,
   }));
@@ -18,8 +18,8 @@ export const vimeoVideotoVideo = (video: VimeoVideo): Video => ({
   title: video.name,
   link: video.player_embed_url,
   description: video.description,
-  backgroundImage: video.pictures.base_link,
-  duration: video.duration.toString(),
+  backgroundImage: video.pictures?.base_link,
+  duration: video.duration?.toString(),
   categories: video.categories,
   createdAt: video.created_time,
 });

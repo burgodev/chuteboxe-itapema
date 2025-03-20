@@ -35,7 +35,7 @@ const useGetMovies = () => {
 
       console.log("accessToken", accessToken);
 
-      const videos = await getVimeoVideos({ token: accessToken });
+      const videos = await getVimeoVideos();
 
       setMovies(videos);
     } catch (err) {
