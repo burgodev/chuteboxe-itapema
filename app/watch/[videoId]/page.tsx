@@ -13,14 +13,7 @@ interface WatchProps {
   };
 }
 
-const Watch = async ({ params }: WatchProps) => {
-  const { videoId } = params;
-  const accessToken = await fetchVimeoAccessToken();
-
-  const videoData = await getVimeoVideo({ videoId });
-
-  console.log("videoData", videoData);
-
+const Watch = async () => {
   const videos = await getVimeoVideos();
   const video = videos[0];
 
