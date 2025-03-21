@@ -11,7 +11,7 @@ const useMovies = () => {
 
   const [movies, setMovies] = useState<Movie[]>([]);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
-  const [isPaginationActive, setIsPaginationActive] = useState(false);
+  const [isPaginationActive, setIsPaginationActive] = useState(true);
   const { currentPage, handlePageChange, paginate } =
     usePagination(PAGINATION_COUNT);
 
